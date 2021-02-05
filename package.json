@@ -1,0 +1,30 @@
+{
+  "name": "blogs-api",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.30",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
+  },
+  "scripts": {
+    "test-coverage": "jest --collectCoverage",
+    "debug": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "jest": "^26.0.1",
+    "sequelize-cli": "^6.2.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
