@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const UserRoute = require('./controllers/UserRoutes');
 const PostRoute = require('./controllers/PostRoutes');
@@ -9,8 +8,8 @@ const ErrorController = require('./controllers/errorController');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.post('/login', UserController.loginUser);
 

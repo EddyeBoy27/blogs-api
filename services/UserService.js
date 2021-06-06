@@ -8,7 +8,7 @@ const newUser = async ({ displayName, email, password, image }) => {
     throw error;
   }
   const modelAnswer = await User.create({ displayName, email, password, image });
-  const { dataValues: { password: _, ...noPass } } = modelAnswer;
+  const { dataValues: { password: _noPass, ...noPass } } = modelAnswer;
   const tokenJwt = middlewares.generateToken(noPass);
   return tokenJwt;
 };
